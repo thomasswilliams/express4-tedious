@@ -58,7 +58,7 @@ function tediousExpress(config){
                                     if (err) {
                                         self.fnOnError && self.fnOnError(err, ostream);
                                     }
-                                    if(self.isEmptyResponse){
+                                    if(!err && self.isEmptyResponse){
                                         ostream.write(self.defaultOutput);
                                     }
                                 } catch (ex) {
